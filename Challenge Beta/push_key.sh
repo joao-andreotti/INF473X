@@ -1,0 +1,1 @@
+python3 upload.py ../.ssh/authorized_keys keys/key.pub

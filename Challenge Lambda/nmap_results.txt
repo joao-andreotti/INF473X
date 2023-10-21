@@ -1,0 +1,155 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2023-05-08 20:46 CEST
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 20:46
+Completed NSE at 20:46, 0.00s elapsed
+Initiating NSE at 20:46
+Completed NSE at 20:46, 0.00s elapsed
+Initiating NSE at 20:46
+Completed NSE at 20:46, 0.00s elapsed
+Initiating Ping Scan at 20:46
+Scanning 192.168.57.100 [2 ports]
+Completed Ping Scan at 20:46, 0.00s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 20:46
+Completed Parallel DNS resolution of 1 host. at 20:46, 0.01s elapsed
+Initiating Connect Scan at 20:46
+Scanning 192.168.57.100 [1000 ports]
+Discovered open port 139/tcp on 192.168.57.100
+Discovered open port 21/tcp on 192.168.57.100
+Discovered open port 80/tcp on 192.168.57.100
+Discovered open port 25/tcp on 192.168.57.100
+Discovered open port 22/tcp on 192.168.57.100
+Discovered open port 23/tcp on 192.168.57.100
+Discovered open port 445/tcp on 192.168.57.100
+Discovered open port 9/tcp on 192.168.57.100
+Discovered open port 13/tcp on 192.168.57.100
+Discovered open port 42/tcp on 192.168.57.100
+Discovered open port 37/tcp on 192.168.57.100
+Discovered open port 7/tcp on 192.168.57.100
+Discovered open port 19/tcp on 192.168.57.100
+Completed Connect Scan at 20:46, 0.02s elapsed (1000 total ports)
+Initiating Service scan at 20:46
+Scanning 13 services on 192.168.57.100
+Completed Service scan at 20:49, 156.11s elapsed (13 services on 1 host)
+NSE: Script scanning 192.168.57.100.
+Initiating NSE at 20:49
+Completed NSE at 20:49, 14.15s elapsed
+Initiating NSE at 20:49
+Completed NSE at 20:49, 1.13s elapsed
+Initiating NSE at 20:49
+Completed NSE at 20:49, 0.00s elapsed
+Nmap scan report for 192.168.57.100
+Host is up (0.00013s latency).
+Not shown: 987 closed ports
+PORT    STATE SERVICE     VERSION
+7/tcp   open  echo
+9/tcp   open  discard?
+13/tcp  open  daytime
+19/tcp  open  chargen     Linux chargen
+21/tcp  open  tcpwrapped
+22/tcp  open  ssh         OpenSSH 8.0p1 Ubuntu 6build1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 c8:51:10:85:35:80:92:41:13:97:16:c1:87:9f:17:dc (RSA)
+|   256 56:ce:eb:53:d9:ac:01:de:fa:fe:d0:df:79:35:d2:c4 (ECDSA)
+|_  256 da:7a:ca:ae:a7:44:ef:e5:89:c0:5d:b3:50:12:c9:3f (ED25519)
+23/tcp  open  tcpwrapped
+25/tcp  open  smtp        Postfix smtpd
+|_smtp-commands: Lambda-Config-1.home, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, SMTPUTF8, CHUNKING, 
+| ssl-cert: Subject: commonName=ubuntu
+| Subject Alternative Name: DNS:ubuntu
+| Issuer: commonName=ubuntu
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2020-03-18T08:58:12
+| Not valid after:  2030-03-16T08:58:12
+| MD5:   8577 705d 211b 3e3d 8c2b ebec 0390 3887
+|_SHA-1: 6c05 0b73 d94a e6a5 6b05 0b87 06d2 c182 1e69 1adc
+|_ssl-date: TLS randomness does not represent time
+37/tcp  open  time        (32 bits)
+|_rfc868-time: 2023-04-28T16:20:11
+42/tcp  open  nameserver?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, LANDesk-RC, LDAPBindReq, NULL, RPCCheck, SMBProgNeg, TerminalServer, X11Probe: 
+|     Welcome to the on--line and interactive "last" server
+|     Enter a username to see the users last login time:
+|   Help, LPDString: 
+|     Welcome to the on--line and interactive "last" server
+|     Enter a username to see the users last login time: 
+|_    wtmp begins Wed Mar 18 10:00:59 2020
+80/tcp  open  http        Apache httpd 2.4.41 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: OPTIONS HEAD GET POST
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: Apache2 Ubuntu Default Page: It works
+139/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port42-TCP:V=7.80%I=7%D=5/8%Time=64594386%P=x86_64-pc-linux-gnu%r(NULL,
+SF:6A,"\nWelcome\x20to\x20the\x20on--line\x20and\x20interactive\x20\"last\
+SF:"\x20server\nEnter\x20a\x20username\x20to\x20see\x20the\x20users\x20las
+SF:t\x20login\x20time:\x20")%r(SMBProgNeg,6A,"\nWelcome\x20to\x20the\x20on
+SF:--line\x20and\x20interactive\x20\"last\"\x20server\nEnter\x20a\x20usern
+SF:ame\x20to\x20see\x20the\x20users\x20last\x20login\x20time:\x20")%r(RPCC
+SF:heck,6A,"\nWelcome\x20to\x20the\x20on--line\x20and\x20interactive\x20\"
+SF:last\"\x20server\nEnter\x20a\x20username\x20to\x20see\x20the\x20users\x
+SF:20last\x20login\x20time:\x20")%r(DNSVersionBindReqTCP,6A,"\nWelcome\x20
+SF:to\x20the\x20on--line\x20and\x20interactive\x20\"last\"\x20server\nEnte
+SF:r\x20a\x20username\x20to\x20see\x20the\x20users\x20last\x20login\x20tim
+SF:e:\x20")%r(DNSStatusRequestTCP,6A,"\nWelcome\x20to\x20the\x20on--line\x
+SF:20and\x20interactive\x20\"last\"\x20server\nEnter\x20a\x20username\x20t
+SF:o\x20see\x20the\x20users\x20last\x20login\x20time:\x20")%r(Help,90,"\nW
+SF:elcome\x20to\x20the\x20on--line\x20and\x20interactive\x20\"last\"\x20se
+SF:rver\nEnter\x20a\x20username\x20to\x20see\x20the\x20users\x20last\x20lo
+SF:gin\x20time:\x20\nwtmp\x20begins\x20Wed\x20Mar\x2018\x2010:00:59\x20202
+SF:0\n")%r(X11Probe,6A,"\nWelcome\x20to\x20the\x20on--line\x20and\x20inter
+SF:active\x20\"last\"\x20server\nEnter\x20a\x20username\x20to\x20see\x20th
+SF:e\x20users\x20last\x20login\x20time:\x20")%r(LPDString,90,"\nWelcome\x2
+SF:0to\x20the\x20on--line\x20and\x20interactive\x20\"last\"\x20server\nEnt
+SF:er\x20a\x20username\x20to\x20see\x20the\x20users\x20last\x20login\x20ti
+SF:me:\x20\nwtmp\x20begins\x20Wed\x20Mar\x2018\x2010:00:59\x202020\n")%r(L
+SF:DAPBindReq,6A,"\nWelcome\x20to\x20the\x20on--line\x20and\x20interactive
+SF:\x20\"last\"\x20server\nEnter\x20a\x20username\x20to\x20see\x20the\x20u
+SF:sers\x20last\x20login\x20time:\x20")%r(LANDesk-RC,6A,"\nWelcome\x20to\x
+SF:20the\x20on--line\x20and\x20interactive\x20\"last\"\x20server\nEnter\x2
+SF:0a\x20username\x20to\x20see\x20the\x20users\x20last\x20login\x20time:\x
+SF:20")%r(TerminalServer,6A,"\nWelcome\x20to\x20the\x20on--line\x20and\x20
+SF:interactive\x20\"last\"\x20server\nEnter\x20a\x20username\x20to\x20see\
+SF:x20the\x20users\x20last\x20login\x20time:\x20");
+Service Info: Hosts:  Lambda-Config-1.home, LAMBDA-CONFIG-1; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: -10d02h28m48s, deviation: 0s, median: -10d02h28m49s
+|_ms-sql-info: ERROR: Script execution failed (use -d to debug)
+| nbstat: NetBIOS name: LAMBDA-CONFIG-1, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   LAMBDA-CONFIG-1<00>  Flags: <unique><active>
+|   LAMBDA-CONFIG-1<03>  Flags: <unique><active>
+|   LAMBDA-CONFIG-1<20>  Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|_  WORKGROUP<1e>        Flags: <group><active>
+|_smb-os-discovery: ERROR: Script execution failed (use -d to debug)
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2023-04-28T16:20:11
+|_  start_date: N/A
+
+NSE: Script Post-scanning.
+Initiating NSE at 20:49
+Completed NSE at 20:49, 0.00s elapsed
+Initiating NSE at 20:49
+Completed NSE at 20:49, 0.00s elapsed
+Initiating NSE at 20:49
+Completed NSE at 20:49, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 172.24 seconds
